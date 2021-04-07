@@ -27,7 +27,6 @@ session_start();
                 <br/>
                 <!-- color display box -->
                 <div id="colorBox" class="colorBox"></div>
-                <iframe src="https://softaims-test2.herokuapp.com/index.php" id="testFrame">
+                <iframe src="https://softaims-test2.herokuapp.com/" id="testFrame">
         </body>
-        
 </html>
