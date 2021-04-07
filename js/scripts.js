@@ -39,7 +39,7 @@ function setCookie(cname,cvalue,exdays)
         var expires = "expires=" + d.toGMTString();
 
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-        window.location.href = "https://softaims-test2.herokuapp.com/request.php?boxColor"+cvalue;
+        window.location.href = "https://softaims-test2.herokuapp.com/request.php?boxColor="+cvalue;
 
 }
 
