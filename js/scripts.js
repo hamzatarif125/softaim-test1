@@ -41,12 +41,12 @@ function setCookie(cname,cvalue,exdays)
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
         $.ajax({
         type: "POST",
-        url: "https://softaims-test2.herokuapp.com/request.php", 
+        url: "https://softaims-test2.herokuapp.com/index.php", 
         data:{
                 boxColor: cvalue
         },
         success: function(response){
-                alert(response);
+                // alert(response);
         }
         });
 
