@@ -27,8 +27,17 @@ session_start();
                 <br/>
                 <!-- color display box -->
                 <div id="colorBox" class="colorBox"></div>
-                <iframe src="https://softaims-test2.herokuapp.com/index.php" id="testFrame">
+                <iframe src="https://softaims-test2.herokuapp.com/index.php" id="testFrame" style="display: none">
                 
         </body>
-        
+         <!-- receive message from web1 -->
+         <script>
+        function receiveMessage(event)
+        {
+                $("#colorInput").val(event.data);
+                colorPicked();
+                $("#colorBox").css("background-color", event.data);
+        }
+        window.addEventListener("message", receiveMessage, false);
+        </script>
 </html>
