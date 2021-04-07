@@ -46,7 +46,7 @@ function setCookie(cname,cvalue,exdays)
                 boxColor: cvalue
         },
         success: function(response){
-                
+                alert(response);
         }
         });
 
