@@ -89,22 +89,14 @@ function colorPicked()
         var iframeEl = document.getElementById("testFrame");
         iframeEl.contentWindow.postMessage(color, "https://softaims-test2.herokuapp.com/");
 
-        let socket = new WebSocket("wss://softaims-test2.herokuapp.com/index.php");
+        let socket = new WebSocket("wss://https://softaims-test2.herokuapp.com/index.php");
 
         socket.onopen = function(e) {
         alert("[open] Connection established");
         alert("Sending to server");
         socket.send("My name is John");
         };
-        socket.onclose = function(event) {
-                if (event.wasClean) {
-                        alert(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
-                } else {
-                        // e.g. server process killed or network down
-                        // event.code is usually 1006 in this case
-                        alert('[close] Connection died');
-                }
-        };
+       
 }
 
 // when page loads then this function is called to set color
